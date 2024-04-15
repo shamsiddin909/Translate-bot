@@ -43,6 +43,9 @@ async def lang_user(call: types.CallbackQuery):
     await call.message.edit_text(result, reply_markup=btn)
     
 
+@dp.message_handler(commands=['help'])
+async def help_message(message:types.Message):
+  await message.answer("this bot help command here ")
 
 
 if __name__ == "__main__":
